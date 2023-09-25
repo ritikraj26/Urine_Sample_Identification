@@ -3,3 +3,10 @@
   <input type="file" (change)="onFileSelected($event)" accept="image/*">
   <button (click)="uploadImage()">Upload</button>
 </div>
+<div>
+  <ul>
+    <li *ngFor="let color of response.colors">
+      ({{color.R}},{{color.G}},{{color.B}})
+    </li>
+  </ul>
+</div>

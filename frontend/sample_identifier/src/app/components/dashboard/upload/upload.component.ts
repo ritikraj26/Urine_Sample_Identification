@@ -9,7 +9,7 @@ import { ImageUploadService } from '../../../services/image-upload/image-upload.
 })
 export class UploadComponent {
   selectedFile: File | null = null;
-
+  response: any;
   constructor(private imageUploadService: ImageUploadService) {}
 
   onFileSelected(event: any) {
@@ -24,6 +24,7 @@ export class UploadComponent {
       this.imageUploadService.uploadImage(formData).subscribe(
         (response) => {
           console.log('Image uploaded successfully', response);
+          this.response = response; 
         },
         (error) => {
           console.error('Error uploading image', error);

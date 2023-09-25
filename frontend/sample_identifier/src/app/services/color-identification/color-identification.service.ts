@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ColorIdentificationService {
-  private baseUrl: string = 'http://localhost:8000/home/results';
+  private baseUrl: string = 'http://localhost:8000/home/upload';
 
   constructor(private http: HttpClient) { }
 
