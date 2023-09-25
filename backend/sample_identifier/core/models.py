@@ -32,6 +32,10 @@ class colors(models.Model):
 
     def __str__(self):
         return f"Colors for Urine Strip {self.id}"
+    
+
+    class Meta:
+        verbose_name_plural = 'Colors'
   
 class strip(models.Model):
     strip_image = models.ImageField(upload_to="samples/")
