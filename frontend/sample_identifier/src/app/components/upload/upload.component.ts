@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { ImageUploadService } from '../../../services/image-upload/image-upload.service';
+import { ImageUploadService } from '../../services/image-upload/image-upload.service';
 
 @Component({
   selector: 'app-upload',
@@ -10,7 +10,7 @@ import { ImageUploadService } from '../../../services/image-upload/image-upload.
 export class UploadComponent {
   selectedFile: File | null = null;
   response: any;
-  constructor(private imageUploadService: ImageUploadService) {}
+  constructor(private imageUploadService: ImageUploadService) { }
 
   onFileSelected(event: any) {
     this.selectedFile = event.target.files[0] as File;
@@ -24,7 +24,7 @@ export class UploadComponent {
       this.imageUploadService.uploadImage(formData).subscribe(
         (response) => {
           console.log('Image uploaded successfully', response);
-          this.response = response; 
+          this.response = response;
         },
         (error) => {
           console.error('Error uploading image', error);

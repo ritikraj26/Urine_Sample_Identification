@@ -1,5 +1,6 @@
 from rest_framework import serializers
 
-class colorSerialsizer(serializers.Model.Serializer):
-    class Meta:
-        pass
+class ColorSerializer(serializers.Serializer):
+    R = serializers.IntegerField()
+    G = serializers.IntegerField()
+    B = serializers.IntegerField()

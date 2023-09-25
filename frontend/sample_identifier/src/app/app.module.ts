@@ -3,8 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { UploadComponent } from './components/dashboard/upload/upload.component';
-import { ResultsComponent } from './components/dashboard/results/results.component';
+import { UploadComponent } from './components/upload/upload.component';
 // import { Routes } from '@angular/router';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -18,7 +17,6 @@ import { HttpClientModule } from '@angular/common/http';
   declarations: [
     AppComponent,
     UploadComponent,
-    ResultsComponent,
     DashboardComponent,
   ],
   imports: [
